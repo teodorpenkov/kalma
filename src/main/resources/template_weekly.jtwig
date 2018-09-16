@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bg">
+<meta charset="utf-8" />
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <div style="display: inline-block; width: 49%">
+        <img src="src/main/resources/asti_logo.png" style="margin-top: 0px; margin-bottom: 0px;" width="200" height="80" id="logo" />
+        <p class="center-text" style="margin-top: 0px; margin-bottom: 0px; font-size: 25px; font-style: italic; letter-spacing: 2px;"><b>ОБЕДНО МЕНЮ</b></p>
+        <div style="margin-top: 0px;">
+            <p class="italic-bold" style="text-align: left; width:49%; display: inline-block;">Телефон: 0896 433 799</p>
+            <p class="italic-bold" style="text-align: right; width:50%;  display: inline-block;">Разнос от 10.30 ч. до 22.30 ч.</p>
+        </div>
+
+        <p class="weekly-title-underline" style="margin-top: 0px;">СУПИ /от ПОНЕДЕЛНИК до НЕДЕЛЯ/</p>
+        {% for soup in soups %}
+        <div class="flex">
+            <p class="weekly-item">{{ soup.name }}</p>
+            <p class="right weekly-item">{{ soup.price }}лв.</p>
+        </div>
+        {% endfor %}
+        <p class="weekly-title-underline">САЛАТИ /от ПОНЕДЕЛНИК до НЕДЕЛЯ/</p>
+        {% for salad in salads %}
+            <div class="flex">
+            <p class="weekly-item">{{ salad.name }}</p>
+            <p class="right weekly-item">{{ salad.price }}лв.</p>
+        </div>
+        {% endfor %}
+        {% for day in days %}
+            <p class="weekly-title">{{ day.day }}</p>
+            {% for item in day.items %}
+                <div class="flex">
+                    <p class="weekly-item">{{ item.name }}</p>
+                    <p class="right weekly-item">{{ item.price }}лв.</p>
+                </div>
+            {% endfor%}
+        {% endfor %}
+        <p class="weekly-title" style="font-style: normal; font-size: 12px;">Обедно меню и на: www.facebook.com/astivt/</p>
+        <p class="center-text" style="font-size: 12px; font-weight: bold;">Намерете още предложения на: www.astivt.com</p>
+        <p class="weekly-title" style="font-size: 12px;">Разнос от 10:30 ч. до 22:30 ч.</p>
+        <p class="weekly-title-underline" style="margin-top: 15px">СПЕЦИАЛНИ ПРЕДЛОЖЕНИЯ /от ПОНЕДЕЛНИК до НЕДЕЛЯ/ - ПРИГОТВЕНИ НА МОМЕНТА</p>
+        <p class="weekly-title-underline">ДЕСЕРТИ /от ПОНЕДЕЛНИК до НЕДЕЛЯ/</p>
+        <div style="margin-bottom: 5px; font-size: 12px;">
+            <p class="weekly-item">БЕЗПЛАТНИ ПРИБОРИ ЗАЯВЕТЕ ПРИ ПОРЪЧКА</p>
+            <p class="weekly-item">КУТИЯ - 0.30лв.</p>
+            <p class="weekly-item">КУТИЯ ЗА ПИЦА/ПЪРЛЕНКА- 0.50лв.</p>
+            <p class="weekly-item">КУТИЯ ЗА СОС- 0.20лв.</p>
+        </div>
+        <div style="font-size: 12px;">
+            <p class="weekly-item">БЕЗПЛАТНА ДОСТАВКА ПРИ ПОРЪЧКА НАД 10 лв.</p>
+            <p class="weekly-item">ДОСТАВКА В РАМКИТЕ НА ГР. ВЕЛИКО ТЪРНОВО С ИЗКЛЮЧЕНИЕ НА КВАРТАЛ АСЕНОВ И КВАРТАЛ СВЕТА ГОРА - 1 лв.</p>
+            <p class="weekly-item">ПОРЪЧКА НАД 20 лв. - подарък минерална вода 1л.</p>
+            <p class="weekly-item">ПОРЪЧКА НАД 30лв. - подарък Кока Кола 2л. или Бисквитена Торта</p>
+        </div>
+    </div>
+    <div style="display: inline-block; width: 50%">
+        
+    </div>
+</div>
+
+</body>
+</html>

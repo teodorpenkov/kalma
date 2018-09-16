@@ -1,0 +1,62 @@
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.center-text {
+    text-align: center
+}
+
+p.title { 
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+p.item {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+p.weekly-item {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-size: 10px;
+}
+
+p.italic-bold { 
+    font-weight: bold;
+    font-style: italic;
+    font-size: 19px;
+}
+
+p.weekly-title, p.weekly-title-underline {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    background: grey;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+p.weekly-title-underline {
+    text-decoration: underline;
+}
+
+div.flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+div.flex > p {
+    max-width: 60%;
+    text-align: center;
+}
+
+p.right {
+    position: absolute;
+    right: 2%;
+}

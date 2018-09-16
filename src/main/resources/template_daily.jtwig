@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="bg">
+<meta charset="utf-8" />
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+@media print
+<body>
+    <img src="src/main/resources/asti_logo.png" width="200" height="80" id="logo" />
+    <p class="center-text"><b>ОБЕДНО МЕНЮ</b></p>
+    <p class="center-text">{{ day }} - {{ date }}г.</p>
+    <p class="center-text">Телефон за поръчки и резервации: <b>0896 433 799</b></p>
+    {% for category in categories %}
+    <p class="center-text title">{{ category.category }}</p>
+        {% for item in category.items %}
+            <p class="center-text item">{{ item.name }} - {{ item.price }}лв.</p>
+        {% endfor %}
+    {% endfor %}
+    <p class="center-text">
+        Bon Appétit! <br />
+        Благодарим Ви, че сте наши гости! <br />
+        Телефон за поръчки и резервации: <b>0896 433 799</b> <br />
+        www.facebook.com/astivt/ www.astivt.com <br />
+    </p>
+</body>
+</html>
