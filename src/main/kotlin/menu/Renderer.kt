@@ -13,11 +13,10 @@ class Renderer {
 
     fun renderDaily(menu: MenuDate): String {
         val model = KlaxonJson().obj(
-                "day" to dayFromDate(menu.date),
+                "day" to dayFromDate(menu.date).toUpperCase(),
                 "date" to menu.date.toString("dd.MM.YYYY"),
                 "categories" to menu.menu.asJsonArray()
         )
-
 
         return render("/template_daily.jtwig", model)
     }

@@ -18,6 +18,7 @@ p.title {
 p.item {
     margin-top: 0em;
     margin-bottom: 0em;
+    font-style: italic;
 }
 
 p.weekly-item {
