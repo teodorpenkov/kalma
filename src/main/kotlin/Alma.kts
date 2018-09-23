@@ -9,13 +9,7 @@ val weeklyOutput = "/weekly.html"
 
 val commonsFile = File(javaClass.getResource("/commons.alma").path).readText()
 val commons = CommonsParser().parseFile(commonsFile)
-println(
-"""
-Меню всеки ден:
 
-$commons
-"""
-)
 val almaFile = File(javaClass.getResource("/input.alma").path).readText()
 val menu = MenuParser(commons).parseFile(almaFile)
 
