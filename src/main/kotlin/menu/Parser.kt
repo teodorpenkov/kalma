@@ -15,6 +15,7 @@ abstract class AlmaParser<T> {
 
     fun parseFile(file: String): T {
         tokens.addAll(file.split("\n"))
+        println("tokens $tokens")
         consumeTokens()
         return build()
     }
@@ -59,12 +60,14 @@ abstract class AlmaParser<T> {
 
     private fun consumeCategory() {
         currentCategory = currentToken()
+        println("current category: $currentCategory!!")
         currentTokenIndex++
     }
 
     private fun consumeItemsForCategory(category: String) {
         var currentToken = currentToken()
         while (currentToken != null && !currentToken.startsWith("-")) {
+            println("consuming $category")
             var itemTokens = currentToken.split(" - ")
             var name = itemTokens[0]
             var price = itemTokens[1]

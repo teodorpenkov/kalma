@@ -3,11 +3,11 @@
 <meta charset="utf-8" />
 
 <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <img src="../src/main/resources/asti_logo.png" width="200" height="80" id="logo" />
+    <img src="asti_logo.png" width="200" height="80" id="logo" />
     <p class="center-text"><b>ОБЕДНО МЕНЮ</b></p>
     <p class="center-text">{{ day }} - {{ date }}г.</p>
     <p class="center-text">Телефон за поръчки и резервации: <b>0896 433 799</b></p>

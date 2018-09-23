@@ -17,13 +17,13 @@ data class Menu(val items: List<Item>) {
                 DESSERT -> "ДЕСЕРТИ"
             }
 
-            fun categoryFromString(string: String): Category = when (string) {
-                "САЛАТИ" -> SALAD
-                "СУПИ" -> SOUP
-                "ОСНОВНИ ЯСТИЯ" -> MAIN
-                "ДЕСЕРТИ" -> DESSERT
+            fun categoryFromString(string: String): Category = when {
+                string.contains("САЛАТИ") -> SALAD
+                string.contains("СУПИ") -> SOUP
+                string.contains("ОСНОВНИ ЯСТИЯ") -> MAIN
+                string.contains("ДЕСЕРТИ") -> DESSERT
                 else -> {
-                    throw Exception("Invalid category $string")
+                    throw Exception("Invalid category $string $string $string $string .....")
                 }
             }
         }

@@ -3,12 +3,12 @@
 <meta charset="utf-8" />
 
 <head>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../printstyle.css" media="printstyle">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="printstyle.css" media="printstyle">
 </head>
 <body>
 <div style="position: relative; float: left; width: 49%">
-    <img src="../src/main/resources/asti_logo.png" style="margin-top: 0px; margin-bottom: 0px;" width="200" height="80" id="logo" />
+    <img src="asti_logo.png" style="margin-top: 0px; margin-bottom: 0px;" width="200" height="80" id="logo" />
     <p class="center-text" style="margin-top: 0px; margin-bottom: 0px; font-size: 25px; font-style: italic; letter-spacing: 2px;"><b>ОБЕДНО МЕНЮ</b></p>
     <div style="margin-top: 0px;">
         <p class="italic-bold" style="text-align: left; width:49%; display: inline-block;">Телефон: 0896 433 799</p>
@@ -91,7 +91,7 @@
     </div>
 </div>
 <div style="position: relative; float: right; width: 49%">
-    <img src="../src/main/resources/asti_logo.png" style="margin-top: 0px; margin-bottom: 0px;" width="200" height="80" id="logo" />
+    <img src="asti_logo.png" style="margin-top: 0px; margin-bottom: 0px;" width="200" height="80" id="logo" />
         <p class="center-text" style="margin-top: 0px; margin-bottom: 0px; font-size: 25px; font-style: italic; letter-spacing: 2px;"><b>ОБЕДНО МЕНЮ</b></p>
         <div style="margin-top: 0px;">
             <p class="italic-bold" style="text-align: left; width:49%; display: inline-block;">Телефон: 0896 433 799</p>
