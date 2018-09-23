@@ -54,6 +54,9 @@ class Renderer {
                     "salads" to array(
                             commons.categories[Menu.Category.SALAD]!!.map { it.asJsonObject() }
                     ),
+                    "desserts" to array(
+                            commons.categories[Menu.Category.DESSERT]!!.map { it.asJsonObject()}
+                    ),
                     "days" to array(days)
             )
         }
