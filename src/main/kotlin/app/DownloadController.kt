@@ -1,5 +1,6 @@
 package app
 
+import khronos.toString
 import menu.CommonsParser
 import menu.MenuParser
 import menu.Renderer
@@ -18,9 +19,6 @@ class DownloadController : HttpServlet() {
                 "commons" to req.getParameter("commons")
         )
 
-        resp.contentType = "application/zip"
-        resp.setHeader("Content-Disposition", "attachment; filename=response.zip")
-
         val commons = CommonsParser().parseFile(queries["commons"]!!)
         val menu = MenuParser(commons).parseFile(queries["menu"]!!)
 
@@ -28,6 +26,11 @@ class DownloadController : HttpServlet() {
         val dailyMenus = menu.map { renderer.renderDaily(it) }
         val weeklyMenu = renderer.renderWeekly(commons, menu)
 
+        val filename = """
+            menu-${ menu.first().date.toString("dd.MM") }-${ menu.last().date.toString("dd.MM") }.zip
+        """.trimIndent()
+        resp.contentType = "application/zip"
+        resp.setHeader("Content-Disposition", "attachment; filename=$filename")
         MenuResponse.sendResponse(resp, queries, dailyMenus, weeklyMenu)
     }
 }
